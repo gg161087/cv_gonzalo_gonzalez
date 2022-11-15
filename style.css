@@ -1,0 +1,23 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+header {
+    background-color: #1B2430;
+    color:#D6D5A8;
+    text-align: center;    
+}
+p {
+    display:inline-block;
+    width: 400px;
+}
+.nombre {
+    font-weight: 700;
+}
+.tipo {
+    font-weight: 200;
+}
+.subheader {
+    background-color: #D6D5A8;
+    color:#1B2430;
+    text-align: center;
+}
