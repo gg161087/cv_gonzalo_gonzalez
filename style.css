@@ -68,8 +68,11 @@ dt {
 }
 .accounts {
     margin-top: 12px;
-    padding: 0;
+    padding: 1;
 }
 li {
     margin-top: 16px;
+}
+.link {
+    color: #735F32;
 }
