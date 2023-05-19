@@ -1,6 +1,5 @@
 :root {
     font-family: Helvetica, Arial, sans-serif;
-    margin: 0;
     --blanco: rgb(242,242,242);
     --negro: rgb(34, 40, 49);
     --amarillo: rgb(242, 158, 56);
@@ -8,6 +7,10 @@
     --bg-button: rgb(51, 51, 51);
     --br-shadows: rgba(49, 49, 49, 0.3);
     --br-input: rgb(204, 204, 204);   
+}
+*{
+    margin: 0;
+    padding: 0;
 }
 header {
     background-color: #000000;
@@ -52,13 +55,16 @@ section {
     display: inline-block;
     width: 100%;
 }
+.certificates {
+    margin-top: 3rem; 
+}
 #carrusel{  
-    background-color: var(--bg-section);  
+    /* background-color: var(--bg-section); */  
     display: flex;    
-    width: 50%;
+    width: 70%;
     height: 100%;
 }
-#carousel-container {    
+#carousel-container {   
     position: relative;
     border-radius: 10px;
     width: 100%;
@@ -67,29 +73,38 @@ section {
     margin: 0;
     box-shadow: 2px 2px 5px var(--br-shadows);
 }
-#carousel-images {
-    position: relative;
-    /* padding: 20px; */
-    top: 0;
-    left: 0;
+#carousel-images {   
+    margin-top: 1rem;
     width: 100%;
     height: 100%;
     text-align: center;
     display: flex;
     transition: transform 0.5s ease;
     animation: carouselAnimation 10s infinite linear;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#carousel-images .caption {
+    margin: 1rem;
+    width: 80%;
+    color: var(--blanco);
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px var(--br-shadows);
+    background-color: var(--bg-button);
+    padding: 5px 10px;
+    border-radius: 10px;
 }
 .titulo-carrusel{    
-    position: absolute;
     display: flex;
-    justify-content: center; 
+    justify-content: flex-start;
     width: 100%;
     text-align: center;
     z-index: 2;
 }
-.titulo-carrusel h2{
-    background-color: var(--blanco);
-    margin-top: 19px;
+.titulo-carrusel h2{    
+    margin-top: 0; 
     font-size: 24px;
 }
 #carousel-images img {
@@ -97,16 +112,23 @@ section {
     height: 29rem;
     object-fit: contain;
 }
-.prev-button,
-.next-button {
-    background-color: var(--bg-button);
-    color: var(--blanco);
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+
+#carousel-controls {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;    
+    top: 42%;
+    width: 100%;
+    border-spacing: 10px;
+}
+
+#carousel-controls button {
+    margin: 1px 50px;    
+    background-color: transparent;
+    color: black;
     border: none;
-    font-size: 18px;
+    font-size: 3rem;
+    cursor: pointer;
 }
 
 .courses {

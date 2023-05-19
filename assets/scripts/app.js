@@ -3,12 +3,12 @@ const certificados = []
 
 let currentIndex = 0;
 
-const showImage = () => {
+const showCeretificate = () => {
     carouselImages.innerHTML = `
         <img src="${certificados[currentIndex].url}" alt="${certificados[currentIndex].name}">
         <div class="caption">
-            <p>${certificados[currentIndex].name}</p>
-            <p>${certificados[currentIndex].entidade}</p>            
+            <p>Certificado: ${certificados[currentIndex].name}</p>
+            <p>Entidad: ${certificados[currentIndex].entidade}</p>            
         </div>
     `;
 }
@@ -18,7 +18,7 @@ const nextImage = () => {
     if (currentIndex === certificados.length) {
         currentIndex = 0;
     }
-    showImage();
+    showCeretificate();
 }
 
 const prevImage = () => {
@@ -26,7 +26,7 @@ const prevImage = () => {
     if (currentIndex < 0) {
         currentIndex = certificados.length - 1;
     }
-    showImage();
+    showCeretificate();
 }
 
 fetch('./assets/database/certificates.json')
@@ -35,7 +35,7 @@ fetch('./assets/database/certificates.json')
         for (const i of data) {        
             certificados.push(i);
         }
-        showImage();
+        showCeretificate();
     document.querySelector('#prevBtn').addEventListener('click', prevImage);
     document.querySelector('#nextBtn').addEventListener('click', nextImage);
     })
