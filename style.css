@@ -117,18 +117,22 @@ section {
     position: absolute;
     display: flex;
     justify-content: space-between;    
-    top: 42%;
+    top: 45%;
     width: 100%;
     border-spacing: 10px;
 }
 
-#carousel-controls button {
-    margin: 1px 50px;    
+#carousel-controls button {   
     background-color: transparent;
     color: black;
     border: none;
-    font-size: 3rem;
     cursor: pointer;
+}
+#prevBtn {  
+    margin-left: 50px;
+}
+#nextBtn {
+    margin-right: 50px;
 }
 
 .courses {
